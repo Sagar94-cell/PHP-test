@@ -1,0 +1,147 @@
+Q .1
+<?php 
+// PHP program to find the sum of B
+// elements with goto statement 
+function operate($array, $B) 
+{ 
+    $sum = 0; 
+    $index = 0; 
+    label: 
+        $sum += $array[$index++]; 
+          
+        if($index < $B) 
+        { 
+            // backward jump of goto statement 
+            goto label; 
+        } 
+          
+        // return the sum 
+        return $sum; 
+} 
+  
+// Driver code 
+$B = 5; 
+  
+$array = array(1, 2, 3, 4, 5); 
+  
+echo operate($array, $B); 
+  
+// This code is contirbuted  
+// by Mohit kumar 29 
+?> 
+
+OUTPUT:  15
+
+Q.4
+#include <bits/stdc++.h>
+using namespace std;
+void positiveNegativePair(int arr[], int n) ;
+int main(){
+   int arr[] = { 1, 4, 6 , 3, -1, -2, 5, -6, -5 , 8 };
+   int n = 10;
+   cout<<"Postive Negative pairs in the array are :\n";
+   positiveNegativePair(arr, n);
+   return 0;
+}
+void positiveNegativePair(int arr[], int n){
+   bool pair_exists = false;
+   sort(arr, arr + n);
+   for (int i = 0; i < n; i++) {
+      if (arr[i] < 0) {
+         if (binary_search(arr, arr + n, -arr[i])) {
+            cout<<arr[i]<<", "<<-arr[i]<<"\t";
+            pair_exists = true;
+         }
+      }
+      else
+         break;
+   }
+   if (!pair_exists)
+      cout << "No positive-negative pairs exist in the code";
+}
+output:-6, 6 -5, 5 -1, 1
+
+
+
+Q 3 
+1>
+
+public static int maxOnes(int[] arr){
+		int count = 0;
+		int max = 0;
+		for(int i = 0; i < arr.length; i++){
+			if(arr[i] == 0)
+				count = 0;
+			else
+				count++;
+			max = count > max ? count : max;
+		}
+		return max;
+	}
+   00110001001110 - Output :3
+2>public static int maxNumberOf1s(String str) {
+		if (null == str || str.isEmpty() || !str.contains("1")) {
+			return 0;
+		}
+		int count = 0;
+		int curCount = 0;
+		for (int i = 0; i < str.length(); i++) {
+			if (str.charAt(i) == '1') {
+				if (curCount == 0) {
+					curCount = 1;
+				} else {
+					curCount++;
+				}
+				count = Math.max(curCount, count);
+			} else {
+				curCount = 0;
+			}
+		}
+
+		return count;
+	}
+1000010001 - Output :1 
+Q.2
+<!DOCTYPE html>  
+<html>  
+<body>  
+<?php  
+//Initialize array   
+$arr = array(1, 2, 3, 4, 2, 7, 8, 8, 3);   
+   
+print("Duplicate elements in given array: <br>");  
+//Searches for repeated element  
+for($i = 0; $i < count($arr); $i++) {  
+    for($j = $i + 1; $j < count($arr); $j++) {  
+        if($arr[$i] == $arr[$j])  
+            print($arr[$j] . "<br>");  
+    }  
+}  
+?>  
+</body>  
+</html>  
+
+OUTPUT: repeated  elements in given array: 
+2
+3
+8
+Q.5
+
+
+2)
+step 1-
+Create Table: 
+= if  syntex for multiple entity add in column 
+CREATE TABLE `products` (
+  `productID`    int(10) unsigned  NOT NULL AUTO_INCREMENT,
+  `productCode`  char(3)           NOT NULL DEFAULT '',
+  `name`         varchar(30)       NOT NULL DEFAULT '',
+  `quantity`     int(10) unsigned  NOT NULL DEFAULT '0',
+  `price`        decimal(7,2)      NOT NULL DEFAULT '99999.99',
+  PRIMARY KEY (`productID`
+
+sept2-
+= if and multple  columns dis[lay on table
+INSERT INTO products (productCode, name, quantity, price) VALUES
+         ('PEC', 'Pencil 2B', 10000, 0.48),
+         ('PEC', 'Pencil 2H', 8000, 0.49);
